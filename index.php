@@ -28,6 +28,8 @@
 
 
             $sql = "SELECT * FROM `sneakers` WHERE 1";
+
+           
             $result = mysqli_query($con, $sql);
 
             if (mysqli_num_rows($result) > 0) {
@@ -38,9 +40,9 @@
                             <figure>
                                 <img src="<?php echo substr($row['images'], 3); ?> ">
                                 <figcaption>
-                                    <h3><?php echo $row['id_brand'] . ' ' .
+                                    <h3><?php echo $row['brand'] . ' ' .
                                             $row['model']  . '<br>' .
-                                            $row['id_color'] . '<br>' .
+                                            $row['color'] . '<br>' .
                                             '$' . $row['price'] . '-' ?></h3>
                                 </figcaption>
                             </figure>
